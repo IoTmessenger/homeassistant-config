@@ -81,7 +81,8 @@ notify:
     name: bedroom_tv
     filename: webostv2.conf
 
-#shell_command:
+shell_command:
+  backup_config: /home/homeassistant/.homeassistant/shell_scripts/backup_config.sh
 #  announce_note3pro: 'curl "192.168.123.110:1035/?SPEAK={{ speak }}&@DONE@"'
 #  announce_nexus7: 'curl "192.168.123.112:1035/?SPEAK={{ speak }}&@DONE@"'
 
