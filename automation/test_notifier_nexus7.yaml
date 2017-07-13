@@ -1,0 +1,12 @@
+- alias: testNotifier_nexus7
+  trigger:
+    platform: state
+    entity_id: input_boolean.test_notification_nexus7
+    from: "off"
+    to: "on"
+  action:
+    - service: shell_command.announce_nexus7
+      data:
+        speak: This is a soundtest of the Lannouncer notifier on Nexus 7.
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.test_notification_nexus7

@@ -1,0 +1,12 @@
+- alias: testNotifier_note3pro
+  trigger:
+    platform: state
+    entity_id: input_boolean.test_notification_note3pro
+    from: "off"
+    to: "on"
+  action:
+    - service: shell_command.announce_note3pro
+      data:
+        speak: This is a soundtest of the Lannouncer notifier on Redmi Note 3 Pro.
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.test_notification_note3pro

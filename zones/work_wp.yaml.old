@@ -1,0 +1,5 @@
+name: Work WP
+latitude: !secret wp_latitude
+longitude: !secret wp_longitude
+radius: 100
+icon: mdi:bank

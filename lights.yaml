@@ -1,0 +1,54 @@
+  - platform: mqtt
+    name: "Bedroom"
+    command_topic: "cmnd/sonoff01/power"
+    state_topic: "stat/sonoff01/POWER"
+#    optimistic: true
+#    emulated_hue: true
+
+  - platform: mqtt
+    name: "undefined"
+    command_topic: "cmnd/sonoff03/power"
+    state_topic: "stat/sonoff03/POWER"
+#    optimistic: false
+#    emulated_hue: true
+
+  - platform: mqtt
+    name: "switch one"
+    command_topic: "cmnd/sonoff11/power"
+    state_topic: "stat/sonoff11/POWER"
+#    optimistic: false
+#    emulated_hue: true
+
+  - platform: mqtt
+    name: "switch two"
+    command_topic: "cmnd/sonoff12/power"
+    state_topic: "stat/sonoff12/POWER"
+#    optimistic: false
+#    emulated_hue: true
+
+  - platform: mqtt
+    name: "Wall Switch"
+    command_topic: "cmnd/sonoff21/power"
+    state_topic: "stat/sonoff21/POWER"
+#    optimistic: false
+#    emulated_hue: true
+
+  - platform: mqtt
+    name: "Slampher"
+    command_topic: "cmnd/sonoff31/power"
+    state_topic: "stat/sonoff31/POWER"
+#    optimistic: false
+#    emulated_hue: true
+
+  - platform: yeelight
+    devices:
+      192.168.123.50:
+        name: Stairs
+      192.168.123.51:
+        name: Computerdesk
+      192.168.123.52:
+        name: Outdoors2
+      192.168.123.53:
+        name: Dinner
+      192.168.123.54:
+        name: Outdoors

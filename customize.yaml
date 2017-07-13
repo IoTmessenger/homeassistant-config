@@ -1,0 +1,170 @@
+binary_sensor.door_window_sensor_158d00010df37a:
+  friendly_name: Door Window Sensor 1
+binary_sensor.door_window_sensor_158d00013fde2c:
+  friendly_name: Door Window Sensor 2
+binary_sensor.door_window_sensor_158d0001142655:
+  friendly_name: Door Window Sensor 3
+binary_sensor.door_window_sensor_158d00013e50ae:
+  friendly_name: Door Window Sensor 4
+binary_sensor.door_window_sensor_158d0001067241:
+  friendly_name: Door Window Sensor 5
+binary_sensor.door_window_sensor_158d000110698d:
+  friendly_name: Door Window Sensor 6
+binary_sensor.motion_sensor_158d00013f77cc:
+  friendly_name: Motion Sensor 1
+binary_sensor.motion_sensor_158d00013f7a13:
+  friendly_name: Motion Sensor 2
+binary_sensor.motion_sensor_158d00010f8185:
+  friendly_name: Motion Sensor 3
+binary_sensor.motion_sensor_158d00013f723f:
+  friendly_name: Motion Sensor 4
+binary_sensor.motion_sensor_158d00010fee7f:
+  friendly_name: Motion Sensor 5
+binary_sensor.motion_sensor_158d0001537a9f:
+  friendly_name: Motion Sensor 6
+binary_sensor.switch_158d000125cfec:
+  friendly_name: Xiaomi Switch 1
+binary_sensor.switch_158d0001101d73:
+  friendly_name: Xiaomi Switch 2
+binary_sensor.switch_158d00011035e4:
+  friendly_name: Xiaomi Switch 3
+light.gateway_light_f0b429cbea44:
+  friendly_name: Gateway
+sensor.illumination_f0b429cbea44:
+  friendly_name: Gateway Light Sensor
+sensor.temperature_158d00010f6371:
+  friendly_name: Xiaomi Sensor Temperature
+sensor.humidity_158d00010f6371:
+  friendly_name: Xiaomi Sensor Humidity
+  icon: mdi:water-percent
+sensor.living_temperature:
+  friendly_name: Living Temperature
+sensor.living_humidity:
+  friendly_name: Living Humidity
+  icon: mdi:water-percent
+switch.espresso_machine:
+  friendly_name: Espresso Machine
+  icon: mdi:coffee
+sensor.dark_sky_apparent_temperature:
+  friendly_name: Apparent Temperature
+sensor.dark_sky_cloud_coverage:
+  friendly_name: Cloud Coverage
+sensor.dark_sky_daily_high_apparent_temperature:
+  friendly_name: High Apparent Temperature
+sensor.dark_sky_daily_high_temperature:
+  friendly_name: High Temperature
+sensor.dark_sky_daily_low_apparent_temperature:
+  friendly_name: Low Apparent Temperature
+sensor.dark_sky_daily_low_temperature:
+  friendly_name: Low Temperature
+sensor.dark_sky_daily_max_precip_intensity:
+  friendly_name: Max Precip Intensity
+  icon: mdi:cup-water
+sensor.dark_sky_daily_summary:
+  friendly_name: Summary
+sensor.dark_sky_dew_point:
+  friendly_name: Dew Point
+sensor.dark_sky_humidity:
+  friendly_name: Humidity
+sensor.dark_sky_ozone:
+  friendly_name: Ozone
+sensor.dark_sky_precip:
+  friendly_name: Precip
+sensor.dark_sky_precip_intensity:
+  friendly_name: Precip Intensity
+sensor.dark_sky_precip_probability:
+  friendly_name: Precip Probability
+sensor.dark_sky_pressure:
+  friendly_name: Pressure
+sensor.dark_sky_summary:
+  friendly_name: Summary
+sensor.dark_sky_temperature:
+  friendly_name: Temperature
+sensor.dark_sky_visibility:
+  friendly_name: Visibility
+  icon: mdi:weather-fog
+sensor.dark_sky_wind_bearing:
+  friendly_name: Wind Bearing
+sensor.dark_sky_wind_speed:
+  friendly_name: Wind Speed
+sensor.weather_today_condition:
+  friendly_name: Condition
+sensor.weather_today_current:
+  friendly_name: Current
+sensor.weather_today_humidity:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+sensor.weather_today_pressure:
+  friendly_name: Pressure
+  icon: mdi:nature
+sensor.weather_today_temperature:
+  friendly_name: Temperature
+sensor.weather_today_temperature_max:
+  friendly_name: Temperature Max
+sensor.weather_today_temperature_min:
+  friendly_name: Temperature Min
+sensor.weather_today_visibility:
+  friendly_name: Visibility
+  icon: mdi:weather-fog
+sensor.weather_today_wind_speed:
+  friendly_name: Wind Speed
+  icon: mdi:weather-windy
+sensor.weather_tomorrow_condition:
+  friendly_name: Condition
+sensor.weather_tomorrow_temperature_max:
+  friendly_name: Temperature Max
+sensor.weather_tomorrow_temperature_min:
+  friendly_name: Temperature Min
+sensor.pws_precip_1hr_metric:
+  friendly_name: Precip Last Hour
+  icon: mdi:cup-water
+sensor.pws_precip_today_metric:
+  friendly_name: Precip Today
+  icon: mdi:water
+sensor.pws_pressure_mb:
+  friendly_name: Barometric Pressure
+  icon: mdi:nature
+sensor.pws_relative_humidity:
+  friendly_name: Relative Humidity
+  icon: mdi:water-percent
+sensor.pws_temp_c:
+  friendly_name: Temperature
+  icon: mdi:thermometer
+sensor.pws_uv:
+  friendly_name: UV Level
+  icon: mdi:sunglasses
+sensor.pws_visibility_km:
+  friendly_name: Visibility
+  icon: mdi:weather-fog
+sensor.pws_weather:
+  friendly_name: Weather
+sensor.pws_wind_degrees:
+  friendly_name: Wind Bearing
+  icon: mdi:apple-safari
+sensor.pws_wind_dir:
+  friendly_name: Wind Direction
+  icon: mdi:compass
+sensor.pws_wind_gust_mph:
+  friendly_name: Wind Gust Speed
+  icon: mdi:speedometer
+sensor.pws_wind_mph:
+  friendly_name: Sustained Wind Speed
+  icon: mdi:weather-windy
+sensor.pv_generating:
+  friendly_name: PV Generating
+  icon: mdi:weather-sunny
+sensor.pv_generated_total:
+  friendly_name: PV Generated Total
+  icon: mdi:weather-sunny
+sensor.pvoutput:
+  friendly_name: PVOutput Today
+  icon: mdi:weather-sunny
+sensor.power_generation:
+  friendly_name: PVOutput Generating
+  icon: mdi:weather-sunny
+sensor.energy_generation:
+  friendly_name: PVOutput Generated
+  icon: mdi:weather-sunny
+sensor.battery__redmi_note_3_pro:
+  friendly_name: Battery - Redmi Note 3 Pro
+  icon: mdi:battery-charging

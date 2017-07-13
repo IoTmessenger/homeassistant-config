@@ -1,0 +1,42 @@
+- alias: test_espresso
+  trigger:
+    platform: state
+    entity_id: input_boolean.test_espresso_machine
+    to: "on"
+  action:
+    - service: shell_command.announce_note3pro
+      data:
+        speak: Master, please wait while the Espresso machine is being prepared for you.
+    - service: tts.google_say
+      entity_id: media_player.chromecastaudio8624
+      data:
+        message: 'Master, please wait while the Espresso machine is being prepared for you.'
+    - delay:
+        seconds: 5
+    - service: shell_command.announce_note3pro
+      data:
+        speak: Master, the Espresso machine is now ready for your Cappuccino. The temperature has reached the optimal value.
+    - service: tts.google_say
+      entity_id: media_player.chromecastaudio8624
+      data:
+        message: 'Master, the Espresso machine is now ready for your Cappuccino. The temperature has reached the optimal value.'
+    - delay:
+        seconds: 7
+    - service: shell_command.announce_note3pro
+      data:
+        speak: Master, the Espresso machine has been turned off.
+    - service: tts.google_say
+      entity_id: media_player.chromecastaudio8624
+      data:
+        message: 'Master, the Espresso machine has been turned off.'
+    - delay:
+        seconds: 1
+    - service: shell_command.announce_note3pro
+      data:
+        speak: By the way, please do not forget to clean it. Again.
+    - service: tts.google_say
+      entity_id: media_player.chromecastaudio8624
+      data:
+        message: 'By the way, please do not forget to clean it. Again'
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.test_espresso_machine

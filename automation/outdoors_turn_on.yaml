@@ -1,0 +1,13 @@
+- alias: Turn on outdoor lights when there is movement
+  trigger:
+    platform: state
+    # Motion Sensor 1
+    entity_id: binary_sensor.motion_sensor_158d00013f77cc
+    to: 'on'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: "below_horizon"
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.timed_lamp_outdoors

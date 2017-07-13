@@ -1,0 +1,44 @@
+bed_down_watching:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.feetdown
+    - delay:
+        seconds: 5
+    - service: switch.turn_off
+      data:
+        entity_id: switch.feetdown
+    - service: switch.turn_on
+      data:
+        entity_id: switch.headdown
+    - delay:
+        seconds: 5
+    - service: switch.turn_off
+      data:
+        entity_id: switch.headdown
+
+#    - service: notify.IoTmessenger_bot
+#      data:
+#        message: 'Master, your bed has landed'
+
+bed_up_watching:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.headup
+    - delay:
+        seconds: 5
+    - service: switch.turn_off
+      data:
+        entity_id: switch.headup
+    - service: switch.turn_on
+      data:
+        entity_id: switch.feetup
+    - delay:
+        seconds: 5
+    - service: switch.turn_off
+      data:
+        entity_id: switch.feetup
+#    - service: notify.IoTmessenger_bot
+#      data:
+#        message: 'Master, your bed is ready for watching'

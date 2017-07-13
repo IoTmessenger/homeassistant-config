@@ -1,0 +1,24 @@
+bed_up_watching:
+  name: watch tv
+  initial: off
+  icon: mdi:television
+#bed_down_watching:
+#  name: sleep mode
+#  initial: off
+#  icon: mdi:hotel
+test_espresso_machine:
+  name: Test the Espresso Machine
+  initial: off
+  icon: mdi:speaker-wireless
+test_speaker:
+  name: Test the ChromeCast Audio
+  initial: off
+  icon: mdi:speaker-wireless
+test_notification_nexus7:
+  name: Test the TTS on Nexus 7
+  initial: off
+  icon: mdi:speaker-wireless
+test_notification_note3pro:
+  name: Test the TTS on Note 3 Pro
+  initial: off
+  icon: mdi:speaker-wireless

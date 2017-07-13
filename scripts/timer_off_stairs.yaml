@@ -1,0 +1,10 @@
+timer_off_stairs:
+  sequence:
+    - delay:
+        seconds: 60
+    - service: light.turn_off
+      data:
+        entity_id: light.stairs
+#    - service: light.turn_off
+#      data:
+#        entity_id: light.dinner

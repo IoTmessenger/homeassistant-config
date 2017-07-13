@@ -1,0 +1,5 @@
+platform: webostv
+name: Livingroom TV
+host: 192.168.123.21
+mac: E8:F2:E2:78:00:2C
+filename: webostv1.conf

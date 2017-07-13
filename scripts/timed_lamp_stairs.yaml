@@ -1,0 +1,16 @@
+timed_lamp_stairs:
+  sequence:
+     # Cancel ev. old timers
+    - service: script.turn_off
+      data:
+        entity_id: script.timer_off_stairs
+    - service: light.turn_on
+      data:
+        entity_id: light.stairs
+#    - service: light.turn_on
+#      data:
+#        entity_id: light.dinner
+      # Set new timer
+    - service: script.turn_on
+      data:
+        entity_id: script.timer_off_stairs

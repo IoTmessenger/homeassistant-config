@@ -1,0 +1,16 @@
+timed_lamp_outdoors:
+  sequence:
+    # Cancel ev. old timers
+    - service: script.turn_off
+      data:
+        entity_id: script.timer_off_outdoors
+    - service: light.turn_on
+      data:
+        entity_id: light.outdoors
+    - service: light.turn_on
+      data:
+        entity_id: light.outdoors2
+    # Set new timer
+    - service: script.turn_on
+      data:
+        entity_id: script.timer_off_outdoors

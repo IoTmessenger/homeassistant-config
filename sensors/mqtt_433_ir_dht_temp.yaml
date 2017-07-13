@@ -1,0 +1,4 @@
+platform: mqtt
+state_topic: "home/sensors/temp"
+name: 'Living Temperature'
+unit_of_measurement: '°C'

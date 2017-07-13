@@ -1,0 +1,164 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  time_zone: Europe/Amsterdam
+  customize: !include customize.yaml
+
+http:
+  api_password: !secret api_password
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url
+  ip_ban_enabled: True
+  login_attempts_threshold: 5
+
+mqtt:
+  broker: !secret mqtt_broker
+  port: !secret mqtt_port
+  client_id: home-assistant-1
+  keepalive: 60
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  protocol: 3.1
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+    qos: 1
+    retain: true
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
+    qos: 1
+    retain: true
+
+tts:
+  platform: google
+#  language: 'en'
+  cache: true
+#  cache_dir: /tmp/tts
+  time_memory: 300
+
+device_tracker:
+#  - platform: owntracks
+  - platform: mqtt_json
+    devices:
+      my_device: zanzito/RedmiNotePro/location
+
+  - platform: nmap_tracker
+    hosts: !secret nmap_hosts
+
+  - platform: mqtt
+    devices:
+      doorbellNotifier: doorbellNotifier
+
+  - platform: mqtt
+    devices:
+      mailNotifier: mailNotifier
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api_key
+    allowed_chat_ids:
+      - !secret telegram_chat_id
+
+notify:
+  - name: !secret telegram_name
+    platform: telegram
+#    api_key: !secret telegram_api_key
+    chat_id: !secret telegram_chat_id
+  - name: RedmiNotePro
+    platform: zanzito
+    device-name: RedmiNotePro
+  - platform: webostv
+    host: 192.168.123.21
+    name: livingroom_tv
+    filename: webostv1.conf
+  - platform: webostv
+    host: 192.168.123.25
+    name: bedroom_tv
+    filename: webostv2.conf
+
+#shell_command:
+#  announce_note3pro: 'curl "192.168.123.110:1035/?SPEAK={{ speak }}&@DONE@"'
+#  announce_nexus7: 'curl "192.168.123.112:1035/?SPEAK={{ speak }}&@DONE@"'
+
+#rest_command:
+#  ringlight_off:
+#    url: 'ws://192.168.123.161:81/'
+
+ifttt:
+  key: !secret ifttt_key
+
+#ffmpeg:
+#  ffmpeg_bin: /usr/bin/avconv
+#  run_test: true
+
+emulated_hue:
+  type: alexa
+  host_ip: !secret hue_host_ip
+  listen_port: !secret hue_listen_port
+#  expose_by_default: true
+#  exposed_domains:
+#    - light
+
+#panel_custom:
+#  - name: dmp
+#    sidebar_title: Digital Movie Poster
+#    sidebar_icon: mdi:movie
+#    config:
+#      kodi: media_player.nvidia_shield_pro_spmc
+#      api_pwd: !secret dmp_api_pwd
+
+panel_iframe:
+  youless:
+    title: 'YouLess LS110'
+    icon: 'mdi:weather-sunset-down'
+    url: !secret youless_url
+
+  pvoutput:
+    title: 'PVOutput'
+    icon: 'mdi:view-column'
+    url: !secret pvoutput_url
+
+  ringlight:
+    title: 'RingLight'
+    icon: 'mdi:google-circles-communities'
+    url: !secret ringlight_url
+
+xiaomi:
+ gateways:
+   - sid:
+     key: !secret xiaomi_key
+#     interface: 192.168.123.15
+#octoprint:
+#  host: !secret octoprint_ip
+#  api_key: !secret octoprint_api
+
+############
+# INCLUDES #
+############
+light: !include lights.yaml
+switch: !include switches.yaml
+camera: !include cameras.yaml
+group: !include groups.yaml
+zone: !include_dir_list zones/
+sensor: !include_dir_list sensors/
+media_player: !include_dir_list media_player/
+script: !include_dir_merge_named scripts
+automation: !include automations.yaml
+automation old: !include_dir_merge_list automation
+input_boolean: !include_dir_merge_named input_booleans
+
+###########
+# ENABLES #
+###########
+frontend:
+updater:
+discovery:
+conversation:
+history:
+logbook:
+sun:

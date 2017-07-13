@@ -1,0 +1,4 @@
+platform: squeezebox
+#name: Squeezebox
+host: 192.168.123.126
+port: 9002

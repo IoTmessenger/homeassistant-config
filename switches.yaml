@@ -1,0 +1,60 @@
+- platform: broadlink
+  host: !secret bl01_host
+  mac: !secret bl01_mac
+  type: spminiplus
+  friendly_name: 'Stranne'
+  icon: mdi:lightbulb
+
+- platform: broadlink
+  host: !secret bl02_host
+  mac: !secret bl02_mac
+  type: spminiplus
+  friendly_name: 'Strip'
+  icon: mdi:lightbulb
+
+- platform: mqtt
+  name: "Espresso Machine"
+  command_topic: "cmnd/sonoff02/power"
+  state_topic: "stat/sonoff02/POWER"
+  optimistic: false
+  emulated_hue: true
+
+- platform: mqtt
+  name: "HeadUp"
+  state_topic: "ha/headUp"
+  command_topic: "ha/headUp"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: "HeadDown"
+  state_topic: "ha/headDown"
+  command_topic: "ha/headDown"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: "FeetUp"
+  state_topic: "ha/feetUp"
+  command_topic: "ha/feetUp"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: "FeetDown"
+  state_topic: "ha/feetDown"
+  command_topic: "ha/feetDown"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  retain: true

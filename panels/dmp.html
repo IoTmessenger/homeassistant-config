@@ -1,0 +1,141 @@
+<!-- START CSS -->
+<style>
+.dmp-content {
+	background:
+		radial-gradient(black 15%, transparent 16%) 0 0,
+		radial-gradient(black 15%, transparent 16%) 8px 8px,
+		radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+		radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:#282828;
+	background-size:16px 16px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #c8c8c8;
+	height: 100%;
+}
+.dmp-headline {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+.dmp-content {
+	height: 100%;
+	text-align: center;
+}
+
+.dmp-content img {
+	height: 80%;
+}
+
+.dmp-state {
+	font-size: 20pt;
+}
+
+.dmp-runtime {
+	font-size: 14pt;
+}
+
+.dmp-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+</style>
+<!-- END CSS -->
+<!-- START TEMPLATE FOR POLYMER -->
+<dom-module id='ha-panel-dmp'>
+	<template>
+		<div class="dmp-content dmp-fullscreen" id="output">
+			<div class="firstRun">
+				<h1 class="dmp-headline">Could not load the State</h1>
+				<p>Please check that you entered the correct entity_id of your Kodi component.</p>
+			</div>
+		</div>
+	</template>
+</dom-module>
+<!-- END TEMPLATE FOR POLYMER -->
+<!-- START CODE -->
+<script type="text/javascript">
+	// Make config variables global
+	var api_pwd;
+	var entityId;
+	// Update the view with the current state of the Kodi component.
+	// ent = entity of your Kodi component
+	function updateView(ent){
+		var output = document.getElementById('output');
+		if ("undefined" !== ent){
+			var new_html;
+			if ( ent.state == "idle" ) {
+				new_html = "<h1 class=dmp-headline><p align=center>No media playing on " + ent.attributes.friendly_name + "</p></h1>";
+			} else {
+				var rtime = new Date(ent.attributes.media_duration * 1000).toISOString().substr(11, 8);
+				new_html = "<img src=" + ent.attributes.entity_picture;
+				if("undefined" !== api_pwd) {
+					new_html += "&api_password=" + api_pwd;
+				}
+				 new_html += " /></div><div class=dmp-state><p>Now " + ent.state + " on " + ent.attributes.friendly_name + "</p></div><div class=dmp-runtime><p>Runtime: " + rtime + "</p>";
+			}
+		}
+		output.innerHTML = new_html;
+	}
+	// Helper function to pass entity to updateView function
+	function propChange(entities){
+		updateView(entities.entities);
+	}
+	function render(hass, panel) {
+		// Set config
+		api_pwd = panel.config.api_pwd;
+		entityId = panel.config.kodi;
+		// Register for updates
+		hass.reactor.observe(hass.entityGetters.byId(entityId), entities => this.propChange({entities}));
+		
+		// Update the current view initially
+		updateView(hass.reactor.evaluate(hass.entityGetters.byId(entityId)));
+		}
+	// Polymer stuff
+	Polymer({
+		is: 'ha-panel-dmp',
+		properties: {
+			// Home Assistant object
+			hass: {
+			type: Object,
+			},
+			// If should render in narrow mode
+			narrow: {
+				type: Boolean,
+				value: false,
+			},
+			// If sidebar is currently shown
+			showMenu: {
+				type: Boolean,
+				value: false,
+			},
+			// Home Assistant panel info
+			// panel.config contains config passed to panel_custom serverside
+			panel: {
+				type: Object,
+			}
+		},
+		// This will make sure we forward changed properties
+		observers: [
+			'propsChanged(hass, narrow, showMenu, panel)',
+		],
+		// Called when properties change
+		propsChanged: function (hass, narrow, showMenu, panel) {
+			this.mount(hass, narrow, showMenu, panel);
+		},
+		// Render React. Debounce in case multiple properties change.
+		mount: function (hass, narrow, showMenu, panel) {
+			this.debounce('mount', function () {
+			render(hass, panel);  
+			}.bind(this));
+		},
+		// Unmount React node when panel no longer in use.
+		detached: function () {
+		},
+	});
+</script>
+<!-- END CODE -->

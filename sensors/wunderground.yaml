@@ -1,0 +1,15 @@
+platform: wunderground
+api_key: !secret wunderground_api_key
+monitored_conditions:
+  - precip_1hr_metric
+  - precip_today_metric
+  - pressure_mb
+  - relative_humidity
+  - temp_c
+  - UV
+  - visibility_km
+  - weather
+  - wind_degrees
+  - wind_dir
+  - wind_gust_mph
+  - wind_mph

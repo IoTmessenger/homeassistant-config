@@ -1,0 +1,36 @@
+- alias: mailNotifier
+  trigger:
+    platform: state
+    entity_id: device_tracker.mailnotifier
+    to: "The mailman came by..."
+  action:
+#    - service: notify.IoTmessenger_bot
+#      data:
+#        message: 'Master, the mailman came by and brought you something.'
+#    - service: shell_command.announce_note3pro
+#      data:
+#        speak: Master, the mailman came by and brought you something.
+    - service: tts.google_say
+      entity_id: media_player.chromecastaudio8624
+      data:
+        message: 'Master, the mailman came by and brought you something.'
+    - service: notify.livingroom_tv
+      data:
+        message: "The mailman came by..."
+#        data:
+#          icon: "/home/homeassistant/.homeassistant/www/mailwoman.jpg"
+    - service: notify.bedroom_tv
+      data:
+        message: "The mailman came by..."
+#        data:
+#          icon: "/home/homeassistant/.homeassistant/www/mailwoman.png"
+    - service: persistent_notification.create
+      data_template:
+        message:  >
+          Master, the mailman came by and brought you something.
+        notification_id: "mailnotifier"
+    - delay: 00:00:15
+    - service: device_tracker.see
+      data:
+        dev_id: mailnotifier
+        location_name: 'not_home'

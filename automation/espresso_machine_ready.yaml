@@ -1,0 +1,39 @@
+- alias: espresso_machine_ready
+  trigger:
+    platform: state
+    entity_id: switch.espresso_machine
+    to: "on"
+  action:
+    - service: notify.RedmiNotePro
+      data:
+        message: 'Master, please wait while the Espresso machine is being prepared for you.'
+#        title: 'Espresso prepare'
+        data:
+          say:
+#    - service: shell_command.announce_note3pro
+#      data:
+#        speak: Master, please wait while the Espresso machine is being prepared for you.
+#    - service: tts.google_say
+#      entity_id: media_player.chromecastaudio8624
+#      data:
+#        message: 'Master, please wait while the Espresso machine is being prepared for you.'
+    - delay: 00:20
+    - service: notify.RedmiNotePro
+      data:
+        message: 'Master, the Espresso machine is now ready for your Cappuccino.'
+#        title: 'Espresso ready'
+        data:
+          say:
+    - service: notify.livingroom_tv
+      data:
+        message: "Master, the Espresso machine is now ready for your Cappuccino."
+    - service: notify.bedroom_tv
+      data:
+        message: "Master, the Espresso machine is now ready for your Cappuccino."
+#    - service: shell_command.announce_note3pro
+#      data:
+#        speak: Master, the Espresso machine is now ready for your Cappuccino. The temperature has reached the optimal value.
+#    - service: tts.google_say
+#      entity_id: media_player.chromecastaudio8624
+#      data:
+#        message: 'Master, the Espresso machine is now ready for your Cappuccino. The temperature has reached the optimal value.'

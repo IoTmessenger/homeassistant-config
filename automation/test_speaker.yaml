@@ -1,0 +1,12 @@
+- alias: test_speaker
+  trigger:
+    platform: state
+    entity_id: input_boolean.test_speaker
+    to: "on"
+  action:
+    - service: tts.google_say
+      entity_id: media_player.chromecastaudio8624
+      data:
+        message: 'This is a sound test of the speaker attached to the Google Chromecast Audio.'
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.test_speaker

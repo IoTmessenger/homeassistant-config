@@ -1,0 +1,7 @@
+platform: yweather
+name: Weather Tomorrow
+forecast: 1
+monitored_conditions:
+  - weather
+  - temp_min
+  - temp_max

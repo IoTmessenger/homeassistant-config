@@ -1,0 +1,13 @@
+- alias: Turn on stairs lights when there is movement
+  trigger:
+    platform: state
+    # motion Sensor 2
+    entity_id: binary_sensor.motion_sensor_158d00013f7a13
+    to: 'on'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: "below_horizon"
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.timed_lamp_stairs

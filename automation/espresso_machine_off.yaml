@@ -1,0 +1,27 @@
+- alias: espresso_machine_off
+  trigger:
+    platform: state
+    entity_id: switch.espresso_machine
+    to: "off"
+  action:
+    - service: notify.RedmiNotePro
+      data:
+        message: 'Master, the Espresso machine has been turned off. Please do not forget to clean it, again.'
+#        title: 'Espresso prepare'
+        data:
+          say:
+#    - service: shell_command.announce_note3pro
+#      data:
+#        speak: Master, the Espresso machine has been turned off. Please do not forget to clean it. Again.
+#    - service: tts.google_say
+#      entity_id: media_player.chromecastaudio8624
+#      data:
+#        message: 'Master, the Espresso machine has been turned off. Please do not forget to clean it. Again.'
+#    - delay: 00:00:05
+#    - service: shell_command.announce_note3pro
+#      data:
+#        speak: Please do not forget to clean it. Again.
+#    - service: tts.google_say
+#      entity_id: media_player.chromecastaudio8624
+#      data:
+#        message: 'And, please do not forget to clean it... Again!'

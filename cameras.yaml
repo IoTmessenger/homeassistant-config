@@ -1,0 +1,131 @@
+- name: 00. Digoo_01
+  platform: mjpeg
+  mjpeg_url: !secret digoo1_video_ip
+  still_image_url: !secret digoo1_photo_ip
+  username: !secret digoo_username
+  password: !secret digoo_password
+  authentication: basic
+
+- name: 00. Digoo_02
+  platform: mjpeg
+  mjpeg_url: !secret digoo2_video_ip
+  still_image_url: !secret digoo2_photo_ip
+  username: !secret digoo_username
+  password: !secret digoo_password
+  authentication: basic
+
+- name: 00. Digoo_03
+  platform: mjpeg
+  mjpeg_url: !secret digoo3_video_ip
+  still_image_url: !secret digoo3_photo_ip
+  username: !secret digoo_username
+  password: !secret digoo_password
+  authentication: basic
+
+#- platform: ffmpeg
+#  name: 05. Digoo_01
+#  input: !secret digoo1_input
+
+#- platform: ffmpeg
+#  name: 06. Digoo_02
+#  input: !secret digoo2_input
+
+#- platform: ffmpeg
+#  name: 06. Digoo_03
+#  input: !secret digoo3_input
+
+#- name: 02. DCS-942L
+#  platform: mjpeg
+#  mjpeg_url: !secret dlink_camera_ip
+#  username: !secret dlink_username
+#  password: !secret dlink_password
+
+- name: 02. Galaxy Tab S
+  platform: mjpeg
+  mjpeg_url: !secret tab_camera_ip
+
+- name: 03. Nexus 7
+  platform: mjpeg
+  mjpeg_url: !secret nexus_camera_ip
+
+- name: 04. Sony E2303
+  platform: mjpeg
+  mjpeg_url: !secret sony_camera_ip
+
+- name: Zanzito RedmiNotePro Camera
+  platform: mqtt
+  topic: zanzito/shared_pictures/RedmiNotePro
+
+- name: Michiel
+  platform: generic
+  still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.admin_mi.attributes.latitude }},{{ states.device_tracker.admin_mi.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.admin_mi.attributes.latitude }},{{ states.device_tracker.admin_mi.attributes.longitude }}
+  limit_refetch_to_url_change: true
+
+- name: 01. Weather Satellite
+  platform: generic
+  still_image_url: https://cdn.knmi.nl/knmi/map/page/weer/actueel-weer/satelliet/satloop.gif
+  limit_refetch_to_url_change: false
+
+- name: 02. Weather Radar
+  platform: generic
+  still_image_url: http://cdn.knmi.nl/knmi/map/page/weer/actueel-weer/neerslagradar/WWWRADARLGT_loop.gif
+  limit_refetch_to_url_change: false
+
+- name: 03. Current Winds
+  platform: generic
+  still_image_url: http://cdn.knmi.nl/knmi/map/page/weer/actueel-weer/windkracht.png
+  limit_refetch_to_url_change: false
+
+- name: 04. Current Gusts
+  platform: generic
+  still_image_url: http://cdn.knmi.nl/knmi/map/page/weer/actueel-weer/maxwindkm.png
+  limit_refetch_to_url_change: false
+
+- name: 05. Current Temps
+  platform: generic
+  still_image_url: http://cdn.knmi.nl/knmi/map/page/weer/actueel-weer/temperatuur.png
+  limit_refetch_to_url_change: false
+
+- name: 06. Forecast Tomorrow
+  platform: generic
+  still_image_url: http://cdn.knmi.nl/knmi/map/current/weather/forecast/kaart_verwachtingen_Morgen_dag.gif
+  limit_refetch_to_url_change: false
+
+#  - name: Octoprint
+#    platform: mjpeg
+#    mjpeg_url: !secret octoprint_camera_ip
+
+- name: 01. AlohaSurf Webcam
+  platform: generic
+  still_image_url: http://www.scheveningenlive.nl/aloha.jpg?1484170552543
+  limit_refetch_to_url_change: false
+
+- name: 02. Sportstrand Webcam
+  platform: generic
+  still_image_url: http://www.scheveningenlive.nl/sport.jpg?1484170491803
+  limit_refetch_to_url_change: false
+
+- name: 03. Surf Webcam
+  platform: generic
+  still_image_url: http://www.scheveningenlive.nl/cam_1.jpg?1484170393410
+  limit_refetch_to_url_change: false
+
+- name: 04. Boulevard Webcam
+  platform: generic
+  still_image_url: http://www.scheveningenlive.nl/cam3.jpg?1484170027850
+  limit_refetch_to_url_change: false
+
+- name: 05. KiteSurf Webcam
+  platform: generic
+  still_image_url: http://www.scheveningenlive.nl/kite.jpg?1484170453650
+  limit_refetch_to_url_change: false
+
+- name: 06. Strand Webcam
+  platform: generic
+  still_image_url: http://www.scheveningenlive.nl/cam2.jpg?1484170348099
+  limit_refetch_to_url_change: false
+
+- name: 07. Pier Webcam
+  platform: generic
+  still_image_url: http://www.scheveningenlive.nl/pier.jpg?1484170372477
+  limit_refetch_to_url_change: false

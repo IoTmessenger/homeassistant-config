@@ -1,0 +1,60 @@
+- alias: doorbellNotifier
+  trigger:
+    platform: state
+    entity_id: device_tracker.doorbellnotifier
+    to: "Someone is at the door..."
+  action:
+    - service: notify.IoTmessenger_bot
+      data:
+        title: doorbellNotifier
+        message: 'Master, there is someone at the door.'
+        data:
+          photo:
+            - url: http://www.scheveningenlive.nl/cam2.jpg?1484170348099
+              caption: "doorbellNotifier"
+#    - service: notify.RedmiNotePro
+#      data:
+#        message: 'Master, there is someone at the door. This is a Zanzito test notification'
+#        title: 'doorbellNotifier'
+
+#              username: <username>
+#              password: <password>
+#    - service: shell_command.announce_note3pro
+#      data:
+#        speak: Master, there is someone at the door.
+#    - service: tts.google_say
+#      entity_id: media_player.chromecastaudio8624
+#      data:
+#        message: 'Master, there is someone at the door.'
+    - service: persistent_notification.create
+      data_template:
+        message:  >
+          Master, there was someone at the door.
+        notification_id: "doorbellnotifier"
+    - service: notify.livingroom_tv
+      data:
+        message: "Someone is at the door..."
+#        data:
+#          icon: "/home/homeassistant/.homeassistant/www/doorbell.jpg"
+    - service: notify.bedroom_tv
+      data:
+        message: "Someone is at the door..."
+#        data:
+#          icon: "/home/homeassistant/.homeassistant/www/doorbell.jpg"
+    - service: light.turn_on
+      data:
+        entity_id: light.gateway_light_f0b429cbea44
+#    - service: notify.RedmiNotePro
+#      data:
+#        message: ''
+#        data:
+#          photo:
+#            - url: 'http://www.scheveningenlive.nl/cam2.jpg?1484170348099'
+    - delay: 00:00:10
+    - service: device_tracker.see
+      data:
+        dev_id: doorbellnotifier
+        location_name: 'not_home'
+    - service: light.turn_off
+      data:
+        entity_id: light.gateway_light_f0b429cbea44

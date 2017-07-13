@@ -1,0 +1,12 @@
+- alias: bed_down_watching
+  trigger:
+    platform: state
+    entity_id: input_boolean.bed_up_watching
+    to: "off"
+#  condition:
+#    condition: state
+#    entity_id: device_tracker.admin_mi
+#    to: "on"
+#    state: "home"
+  action:
+    service: script.bed_down_watching

@@ -1,0 +1,8 @@
+platform: google_travel_time
+api_key: !secret travel_api_key
+origin: device_tracker.admin_redminotepro
+destination: !secret wp_destination
+name: Phone to Work WP
+options:
+  mode: transit
+  transit_routing_preference: fewer_transfers
