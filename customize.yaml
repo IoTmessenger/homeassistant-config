@@ -37,10 +37,10 @@ sensor.temperature_158d00010f6371:
 sensor.humidity_158d00010f6371:
   friendly_name: Xiaomi Sensor Humidity
   icon: mdi:water-percent
-sensor.living_temperature:
-  friendly_name: Living Temperature
-sensor.living_humidity:
-  friendly_name: Living Humidity
+sensor.living_room_temperature:
+  friendly_name: Living Room Temperature
+sensor.living_room_humidity:
+  friendly_name: Living Room Humidity
   icon: mdi:water-percent
 switch.espresso_machine:
   friendly_name: Espresso Machine
@@ -167,4 +167,10 @@ sensor.energy_generation:
   icon: mdi:weather-sunny
 sensor.battery__redmi_note_3_pro:
   friendly_name: Battery - Redmi Note 3 Pro
-  icon: mdi:battery-charging
+  icon: mdi:battery
+sensor.battery__nexus_7:
+  friendly_name: Battery - Nexus 7
+  icon: mdi:battery
+#binary_sensor.floorplan:
+#  custom_ui_state_card: floorplan
+#  config: !include floorplan.yaml

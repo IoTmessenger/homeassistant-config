@@ -56,6 +56,10 @@
   platform: mqtt
   topic: zanzito/shared_pictures/RedmiNotePro
 
+- name: Zanzito Nexus7 Camera
+  platform: mqtt
+  topic: zanzito/shared_pictures/Nexus7
+
 - name: Michiel
   platform: generic
   still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.admin_mi.attributes.latitude }},{{ states.device_tracker.admin_mi.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.admin_mi.attributes.latitude }},{{ states.device_tracker.admin_mi.attributes.longitude }}

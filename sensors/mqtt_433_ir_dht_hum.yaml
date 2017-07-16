@@ -1,5 +1,5 @@
 platform: mqtt
 state_topic: "home/sensors/hum"
-name: 'Living Humidity'
+name: 'Living Room Humidity'
 unit_of_measurement: '%'
 icon: mdi:water-percent

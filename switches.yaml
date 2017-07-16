@@ -17,7 +17,8 @@
   command_topic: "cmnd/sonoff02/power"
   state_topic: "stat/sonoff02/POWER"
   optimistic: false
-  emulated_hue: true
+#  emulated_hue: true
+  retain: true
 
 - platform: mqtt
   name: "HeadUp"
@@ -27,7 +28,7 @@
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
-  retain: true
+#  retain: true
 
 - platform: mqtt
   name: "HeadDown"
@@ -37,7 +38,7 @@
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
-  retain: true
+#  retain: true
 
 - platform: mqtt
   name: "FeetUp"
@@ -47,7 +48,7 @@
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
-  retain: true
+#  retain: true
 
 - platform: mqtt
   name: "FeetDown"
@@ -57,4 +58,4 @@
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
-  retain: true
+#  retain: true

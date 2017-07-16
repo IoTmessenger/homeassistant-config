@@ -1,0 +1,103 @@
+platform: template
+sensors:
+  window1_battery:
+    friendly_name: 'Window Sensor 1'
+    value_template: '{{ states.binary_sensor.door_window_sensor_158d00010df37a.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  window2_battery:
+    friendly_name: 'Window Sensor 2'
+    value_template: '{{ states.binary_sensor.door_window_sensor_158d00013fde2c.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  window3_battery:
+    friendly_name: 'Window Sensor 3'
+    value_template: '{{ states.binary_sensor.door_window_sensor_158d0001142655.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  window4_battery:
+    friendly_name: 'Window Sensor 4'
+    value_template: '{{ states.binary_sensor.door_window_sensor_158d00013e50ae.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  window5_battery:
+    friendly_name: 'Window Sensor 5'
+    value_template: '{{ states.binary_sensor.door_window_sensor_158d0001067241.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  window6_battery:
+    friendly_name: 'Window Sensor 6'
+    value_template: '{{ states.binary_sensor.door_window_sensor_158d000110698d.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  motion1_battery:
+    friendly_name: 'Motion Sensor 1'
+    value_template: '{{ states.binary_sensor.motion_sensor_158d00013f77cc.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  motion2_battery:
+    friendly_name: 'Motion Sensor 2'
+    value_template: '{{ states.binary_sensor.motion_sensor_158d00013f7a13.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  motion3_battery:
+    friendly_name: 'Motion Sensor 3'
+    value_template: '{{ states.binary_sensor.motion_sensor_158d00010f8185.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  motion4_battery:
+    friendly_name: 'Motion Sensor 4'
+    value_template: '{{ states.binary_sensor.motion_sensor_158d00013f723f.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  motion5_battery:
+    friendly_name: 'Motion Sensor 5'
+    value_template: '{{ states.binary_sensor.motion_sensor_158d00010fee7f.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  motion6_battery:
+    friendly_name: 'Motion Sensor 6'
+    value_template: '{{ states.binary_sensor.motion_sensor_158d0001537a9f.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  switch1_battery:
+    friendly_name: 'Xiaomi Switch 1'
+    value_template: '{{ states.binary_sensor.switch_158d000125cfec.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  switch2_battery:
+    friendly_name: 'Xiaomi Switch 2'
+    value_template: '{{ states.binary_sensor.switch_158d0001101d73.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  switch3_battery:
+    friendly_name: 'Xiaomi Switch 3'
+    value_template: '{{ states.binary_sensor.switch_158d00011035e4.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  xiaomi_tmp_battery:
+    friendly_name: 'Xiaomi Temperature Sensor'
+    value_template: '{{ states.sensor.temperature_158d00010f6371.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"
+
+  xiaomi_hum_battery:
+    friendly_name: 'Xiaomi Humidity Sensor'
+    value_template: '{{ states.sensor.humidity_158d00010f6371.attributes.battery_level }}'
+    icon_template: mdi:battery
+    unit_of_measurement: "%"

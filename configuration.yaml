@@ -81,8 +81,8 @@ notify:
     name: bedroom_tv
     filename: webostv2.conf
 
-shell_command:
-  backup_config: /home/homeassistant/.homeassistant/shell_scripts/backup_config.sh
+#shell_command:
+#  backup_config: /home/homeassistant/.homeassistant/shell_scripts/backup_config.sh
 #  announce_note3pro: 'curl "192.168.123.110:1035/?SPEAK={{ speak }}&@DONE@"'
 #  announce_nexus7: 'curl "192.168.123.112:1035/?SPEAK={{ speak }}&@DONE@"'
 
@@ -105,27 +105,38 @@ emulated_hue:
 #  exposed_domains:
 #    - light
 
-#panel_custom:
+panel_custom:
 #  - name: dmp
 #    sidebar_title: Digital Movie Poster
 #    sidebar_icon: mdi:movie
 #    config:
 #      kodi: media_player.nvidia_shield_pro_spmc
 #      api_pwd: !secret dmp_api_pwd
+  - name: groundfloor
+    sidebar_title: 00 Ground Floor
+    sidebar_icon: mdi:home
+    url_path: groundfloor
+    config: !include groundfloor.yaml
+
+  - name: upstairs
+    sidebar_title: 01 Upstairs
+    sidebar_icon: mdi:home
+    url_path: upstairs
+    config: !include upstairs.yaml
 
 panel_iframe:
   youless:
-    title: 'YouLess LS110'
+    title: '03 YouLess LS110'
     icon: 'mdi:weather-sunset-down'
     url: !secret youless_url
 
   pvoutput:
-    title: 'PVOutput'
+    title: '04 PVOutput'
     icon: 'mdi:view-column'
     url: !secret pvoutput_url
 
   ringlight:
-    title: 'RingLight'
+    title: '02 RingLight'
     icon: 'mdi:google-circles-communities'
     url: !secret ringlight_url
 

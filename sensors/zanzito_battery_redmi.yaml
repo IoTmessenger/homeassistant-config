@@ -1,6 +1,5 @@
 platform: mqtt
 name: "Battery - Redmi Note 3 Pro"
-#icon: mdi:battery-charging
 state_topic: "zanzito/RedmiNotePro/battery_level"
 qos: 0
 unit_of_measurement: "%"

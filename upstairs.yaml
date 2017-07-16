@@ -1,0 +1,45 @@
+      name: Upstairs
+      image: /local/custom_ui/floorplan/upstairs.svg
+      stylesheet: /local/custom_ui/floorplan/floorplan.css
+
+      # These options are optional
+      warnings:            # enable warnings (to find out why things might ot be working correctly)
+      pan_zoom:            # enable experimental panning / zooming
+      hide_app_toolbar:    # hide the application toolbar (when used as a custom panel)
+
+      #last_motion_entity: sensor.template_last_motion
+      #last_motion_class: last-motion
+
+      groups:
+
+        - name: Lights
+          entities:
+             - light.bedroom
+             - light.stairs
+             - light.computerdesk
+
+          states:
+            - state: 'on'
+              class: 'light-on'
+            - state: 'off'
+              class: 'light-off'
+
+          action:
+            service: toggle
+
+        - name: Media Players
+          entities:
+             - media_player.bedroom_tv
+
+          states:
+            - state: 'off'
+              class: 'squeezebox-off'
+            - state: 'idle'
+              class: 'squeezebox-off'
+            - state: 'paused'
+              class: 'squeezebox-off'
+            - state: 'playing'
+              class: 'squeezebox-on'
+
+          action:
+            service: toggle

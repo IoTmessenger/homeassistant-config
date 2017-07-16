@@ -6,23 +6,43 @@
       - group.lights_all
       - group.switches_all
       - group.media_players
-      - group.testers
+#      - group.testers
 
   notifications:
     name: Notifications
     view: no
     entities:
-#      - device_tracker.admin_mi
-#      - device_tracker.admin_redmi
       - device_tracker.admin_redminotepro
       - device_tracker.doorbellnotifier
       - device_tracker.mailnotifier
       - camera.zanzito_redmiNotePro_camera
+      - camera.zanzito_nexus7_camera
+
+  battery_levels:
+    name: Battery Levels
+    view: no
+    entities:
       - sensor.battery__redmi_note_3_pro
+      - sensor.battery__nexus_7
       - sensor.sonym4batt
       - sensor.tabsbatt
-      - sensor.nexus7batt
-      - sensor.phonebatt
+      - sensor.window1_battery
+      - sensor.window2_battery
+      - sensor.window3_battery
+      - sensor.window4_battery
+      - sensor.window5_battery
+      - sensor.window6_battery
+      - sensor.motion1_battery
+      - sensor.motion2_battery
+      - sensor.motion3_battery
+      - sensor.motion4_battery
+      - sensor.motion5_battery
+      - sensor.motion6_battery
+      - sensor.switch1_battery
+      - sensor.switch2_battery
+      - sensor.switch3_battery
+      - sensor.xiaomi_tmp_battery
+      - sensor.xiaomi_hum_battery
 
   climate:
     name: Climate
@@ -30,8 +50,10 @@
     entities:
       - sensor.temperature_158d00010f6371
       - sensor.humidity_158d00010f6371
-      - sensor.living_temperature
-      - sensor.living_humidity
+      - sensor.living_room_temperature
+      - sensor.living_room_humidity
+      - sensor.ambient_light__nexus_7
+      - sensor.illumination_f0b429cbea44
 
   lights_all:
     name: All Lights
@@ -46,6 +68,7 @@
       - light.stairs
       - light.bedroom
       - light.computerdesk
+      - light.color2
       - light.slampher
 
   switches_all:
@@ -82,15 +105,25 @@
       - media_player.nvidia_shield_pro_spmc
       - media_player.chromecastaudio8624
 
+  #zones:
+  #  name: Zones
+  #  view: yes
+  #  entities:
+  #    - binary_sensor.floorplan
+
   livingroom:
     name: Livingroom
     icon: mdi:sofa
     view: yes
     entities:
+      - sensor.living_room_temperature
+      - sensor.living_room_humidity
+      - sensor.illumination_f0b429cbea44
       - light.stairs
       - light.dinner
       - switch.stranne
       - switch.strip
+      - sensor.illumination_f0b429cbea44
       - media_player.livingroom_tv
       - media_player.shield
       - media_player.nvidia_shield_pro_spmc
@@ -100,6 +133,7 @@
     icon: mdi:stove
     view: yes
     entities:
+      - sensor.ambient_light__nexus_7
       - light.outdoors
       - light.outdoors2
       - switch.espresso_machine
@@ -110,6 +144,8 @@
     icon: mdi:hotel
     view: yes
     entities:
+      - sensor.temperature_158d00010f6371
+      - sensor.humidity_158d00010f6371
       - light.bedroom
       - light.stairs
       - group.bed
@@ -138,6 +174,7 @@
       - light.stairs
       - light.computerdesk
       - light.workbench
+      - light.color2
 
   security:
     name: Security
@@ -274,6 +311,7 @@
     entities:
       - group.pvoutput
       - group.youless
+      - group.battery_levels
 
   youless:
     name: Solar Power (net)
