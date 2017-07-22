@@ -44,11 +44,11 @@
     - service: light.turn_on
       data:
         entity_id: light.gateway_light_f0b429cbea44
-    - service: xiaomi.play_ringtone
-      data_template:
-        ringtone_id: 10
-        gw_sid: !secret xiaomi_sid
-        ringtone_vol: 20
+#    - service: xiaomi.play_ringtone
+#      data_template:
+#        ringtone_id: 10
+#        ringtone_vol: 99
+#        gw_sid: !secret xiaomi_sid
 #    - service: notify.RedmiNotePro
 #      data:
 #        message: ''
@@ -63,3 +63,6 @@
     - service: light.turn_off
       data:
         entity_id: light.gateway_light_f0b429cbea44
+#    - service: xiaomi.stop_ringtone
+#      data_template:
+#        gw_sid: !secret xiaomi_sid

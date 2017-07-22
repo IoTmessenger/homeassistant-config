@@ -144,7 +144,14 @@ xiaomi:
  gateways:
    - sid:
      key: !secret xiaomi_key
-#     interface: 192.168.123.15
+
+weather:
+  - platform: buienradar
+    name: buienradar
+#    latitude: 51.65
+#    longitude: 5.70
+    forecast: True
+
 #octoprint:
 #  host: !secret octoprint_ip
 #  api_key: !secret octoprint_api

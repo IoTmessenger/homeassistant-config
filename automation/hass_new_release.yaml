@@ -1,0 +1,14 @@
+- alias: Update notifications
+  trigger:
+    - platform: state
+      entity_id: updater.updater
+  action:
+    - service: notify.IoTmessenger_bot
+      data:
+        title: 'New HASS release'
+        message: 'Master, a new Home Assistant version has been released.'
+    - service: persistent_notification.create
+      data_template:
+        message:  >
+          Master, a new Home Assistant version has been released.
+        notification_id: "New HASS release"

@@ -1,0 +1,20 @@
+platform: buienradar
+#  latitude: 51.65
+#  longitude: 5.70
+monitored_conditions:
+  - stationname
+  - symbol
+  - humidity
+  - temperature
+  - groundtemperature
+  - windspeed
+  - windforce
+  - winddirection
+  - windazimuth
+  - pressure
+  - visibility
+  - windgust
+  - precipitation
+  - irradiance
+  - precipitation_forecast_average
+  - precipitation_forecast_total

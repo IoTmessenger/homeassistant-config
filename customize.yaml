@@ -1,3 +1,4 @@
+# Xiaomi Sensors
 binary_sensor.door_window_sensor_158d00010df37a:
   friendly_name: Door Window Sensor 1
 binary_sensor.door_window_sensor_158d00013fde2c:
@@ -37,14 +38,15 @@ sensor.temperature_158d00010f6371:
 sensor.humidity_158d00010f6371:
   friendly_name: Xiaomi Sensor Humidity
   icon: mdi:water-percent
+
+# Climate Sensors
 sensor.living_room_temperature:
   friendly_name: Living Room Temperature
 sensor.living_room_humidity:
   friendly_name: Living Room Humidity
   icon: mdi:water-percent
-switch.espresso_machine:
-  friendly_name: Espresso Machine
-  icon: mdi:coffee
+
+# Dark Sky Weather Sensors
 sensor.dark_sky_apparent_temperature:
   friendly_name: Apparent Temperature
 sensor.dark_sky_cloud_coverage:
@@ -87,6 +89,8 @@ sensor.dark_sky_wind_bearing:
   friendly_name: Wind Bearing
 sensor.dark_sky_wind_speed:
   friendly_name: Wind Speed
+
+# Yahoo Weather Sensors
 sensor.weather_today_condition:
   friendly_name: Condition
 sensor.weather_today_current:
@@ -115,6 +119,8 @@ sensor.weather_tomorrow_temperature_max:
   friendly_name: Temperature Max
 sensor.weather_tomorrow_temperature_min:
   friendly_name: Temperature Min
+
+# Wunderground Weather Sensors
 sensor.pws_precip_1hr_metric:
   friendly_name: Precip Last Hour
   icon: mdi:cup-water
@@ -150,6 +156,42 @@ sensor.pws_wind_gust_mph:
 sensor.pws_wind_mph:
   friendly_name: Sustained Wind Speed
   icon: mdi:weather-windy
+
+# Buienradar Weather
+sensor.br_stationname:
+  friendly_name: Stationname
+sensor.br_symbol:
+  friendly_name: Symbol
+sensor.br_temperature:
+  friendly_name: Temperature
+sensor.br_ground_temperature:
+  friendly_name: Ground Temperature
+sensor.br_humidity:
+  friendly_name: Humidity
+sensor.br_pressure:
+  friendly_name: Pressure
+sensor.br_wind_speed:
+  friendly_name: Wind Speed
+sensor.br_wind_gust:
+  friendly_name: Wind Gust
+sensor.br_wind_force:
+  friendly_name: Wind Force
+sensor.br_wind_direction:
+  friendly_name: Wind Direction
+sensor.br_wind_direction_azimuth:
+  friendly_name: Wind Direction Azimuth
+sensor.br_precipitation:
+  friendly_name: Precipitation
+sensor.br_precipitation_forecast_average:
+  friendly_name: Prec. Forecast Average
+sensor.br_precipitation_forecast_total:
+  friendly_name: Prec. Forecast Total
+sensor.br_visibility:
+  friendly_name: Visibility
+sensor.br_irradiance:
+  friendly_name: Irradiance
+
+# Solar Energy Sensors
 sensor.pv_generating:
   friendly_name: PV Generating
   icon: mdi:weather-sunny
@@ -165,12 +207,19 @@ sensor.power_generation:
 sensor.energy_generation:
   friendly_name: PVOutput Generated
   icon: mdi:weather-sunny
+
+# Battery Level Sensors
 sensor.battery__redmi_note_3_pro:
   friendly_name: Battery - Redmi Note 3 Pro
   icon: mdi:battery
 sensor.battery__nexus_7:
   friendly_name: Battery - Nexus 7
   icon: mdi:battery
+
+# Various
+switch.espresso_machine:
+  friendly_name: Espresso Machine
+  icon: mdi:coffee
 #binary_sensor.floorplan:
 #  custom_ui_state_card: floorplan
 #  config: !include floorplan.yaml
