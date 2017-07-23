@@ -1,30 +1,21 @@
 mood_light_effect:
   name: Mood Light Effect
   options:
-   - "BPM"
-   - "Candy Cane"
-   - "Christmas Day"
-   - "Confetti"
-   - "Cyclon Rainbow"
-   - "Dots"
-   - "Easter Sunday"
-   - "Fire"
-   - "Glitter"
-   - "Halloween"
-   - "Juggle"
-   - "Lightning"
-   - "Noise"
-   - "Police All"
-   - "Police One"
-   - "Rainbow"
-   - "Rainbow with Glitter"
-   - "Red, White, Blue"
-   - "Ripple"
-   - "Sinelon"
-   - "Solid"
-   - "Star Wars"
-   - "St. Patricks Day"
-   - "Thanksgiving"
-   - "Twinkle"
-   - "Valentines Day"
-  initial: "Solid"
+    - '"candy cane"'
+    - '"confetti"'
+    - '"cyclon rainbow"'
+    - '"dots"'
+    - '"fire"'
+    - '"glitter"'
+    - '"juggle"'
+    - '"lightning"'
+    - '"noise"'
+    - '"police all"'
+    - '"police one"'
+    - '"rainbow"'
+    - '"rainbow with glitter"'
+    - '"ripple"'
+    - '"sinelon"'
+    - '"solid"'
+    - '"twinkle"'
+  initial: '"solid"'

@@ -135,10 +135,10 @@ panel_iframe:
     icon: 'mdi:view-column'
     url: !secret pvoutput_url
 
-  ringlight:
-    title: '02 RingLight'
-    icon: 'mdi:google-circles-communities'
-    url: !secret ringlight_url
+#  ringlight:
+#    title: '02 RingLight'
+#    icon: 'mdi:google-circles-communities'
+#    url: !secret ringlight_url
 
 xiaomi:
  gateways:

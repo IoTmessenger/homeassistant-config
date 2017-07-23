@@ -130,10 +130,19 @@
       - light.dinner
       - switch.stranne
       - switch.strip
-      - sensor.illumination_f0b429cbea44
+      - group.moodlight
       - media_player.livingroom_tv
       - media_player.shield
       - media_player.nvidia_shield_pro_spmc
+
+  moodlight:
+    name: Mood Light
+    view: no
+    entities:
+      - light.mood_light
+      - input_select.mood_light_effect
+      - input_slider.mood_light_speed
+
 
   kitchen:
     name: Kitchen

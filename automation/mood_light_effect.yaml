@@ -8,4 +8,4 @@
     - service: mqtt.publish
       data_template:
         topic: "devices/moodlight/set"
-        payload: '{{ trigger.to_state.state | string }}'
+        payload: '{"effect":{{ trigger.to_state.state | string }},"state":"ON"}'
