@@ -4,6 +4,9 @@
     entity_id: device_tracker.doorbellnotifier
     to: "Someone is at the door..."
   action:
+    - service: light.turn_on
+      data_template:
+        message: '{"entity_id":"light.mood_light","color_name":"red","brightness":255,"flash":"long"}'
     - service: notify.IoTmessenger_bot
       data:
         title: doorbellNotifier

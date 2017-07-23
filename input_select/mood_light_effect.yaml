@@ -1,6 +1,7 @@
 mood_light_effect:
   name: Mood Light Effect
   options:
+    - '"bpm"'
     - '"candy cane"'
     - '"confetti"'
     - '"cyclon rainbow"'
