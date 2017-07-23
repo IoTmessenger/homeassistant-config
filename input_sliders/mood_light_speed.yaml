@@ -1,0 +1,6 @@
+mood_light_speed:
+  name: Mood Light Speed
+  initial: 150
+  min: 1
+  max: 150
+  step: 10

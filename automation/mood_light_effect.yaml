@@ -1,0 +1,11 @@
+- alias: "Mood Light Effect"
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_select.mood_light_effect
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "devices/moodlight/set"
+        payload: '{{ trigger.to_state.state | string }}'

@@ -170,6 +170,8 @@ script: !include_dir_merge_named scripts
 automation: !include automations.yaml
 automation old: !include_dir_merge_list automation
 input_boolean: !include_dir_merge_named input_booleans
+input_slider: !include_dir_merge_named input_sliders
+input_select: !include_dir_merge_named input_select
 
 ###########
 # ENABLES #

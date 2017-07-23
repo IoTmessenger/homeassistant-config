@@ -6,7 +6,7 @@
       - group.lights_all
       - group.switches_all
       - group.media_players
-#      - group.testers
+      - group.testers
 
   notifications:
     name: Notifications
@@ -71,6 +71,7 @@
       - light.computerdesk
       - light.color2
       - light.slampher
+      - light.mood_light
 
   switches_all:
     name: All Switches
@@ -93,10 +94,13 @@
     name: Testers
     view: no
     entities:
-      - input_boolean.test_espresso_machine
-      - input_boolean.test_speaker
-      - input_boolean.test_notification_nexus7
-      - input_boolean.test_notification_note3pro
+#      - input_boolean.test_espresso_machine
+#      - input_boolean.test_speaker
+#      - input_boolean.test_notification_nexus7
+#      - input_boolean.test_notification_note3pro
+      - input_select.mood_light_effect
+      - input_slider.mood_light_speed
+
 
   media_players:
     name: Media Players
