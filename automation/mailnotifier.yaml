@@ -10,10 +10,24 @@
 #    - service: shell_command.announce_note3pro
 #      data:
 #        speak: Master, the mailman came by and brought you something.
-    - service: tts.google_say
-      entity_id: media_player.chromecastaudio8624
+    - service: light.turn_on
       data:
-        message: 'Master, the mailman came by and brought you something.'
+        entity_id:
+          - light.mood_light
+        color_name: orange
+        brightness: 255
+        flash: "long"
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.ring_light
+        color_name: orange
+        brightness: 255
+        flash: "long"
+#    - service: tts.google_say
+#      entity_id: media_player.chromecastaudio8624
+#      data:
+#        message: 'Master, the mailman came by and brought you something.'
     - service: notify.livingroom_tv
       data:
         message: "The mailman came by..."

@@ -6,7 +6,7 @@
       - group.lights_all
       - group.switches_all
       - group.media_players
-      - group.testers
+#      - group.testers
 
   notifications:
     name: Notifications
@@ -72,6 +72,7 @@
       - light.color2
       - light.slampher
       - light.mood_light
+      - light.ring_light
 
   switches_all:
     name: All Switches
@@ -131,6 +132,7 @@
       - switch.stranne
       - switch.strip
       - group.moodlight
+      - group.ringlight
       - media_player.livingroom_tv
       - media_player.shield
       - media_player.nvidia_shield_pro_spmc
@@ -143,6 +145,13 @@
       - input_select.mood_light_effect
       - input_slider.mood_light_speed
 
+  ringlight:
+    name: Ring Light
+    view: no
+    entities:
+      - light.ring_light
+      - input_select.ring_light_effect
+      - input_slider.ring_light_speed
 
   kitchen:
     name: Kitchen

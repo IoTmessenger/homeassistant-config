@@ -63,6 +63,36 @@
     optimistic: false
     qos: 1
 
+  - platform: mqtt_json
+    name: "Ring Light"
+    state_topic: "devices/ringlight"
+    command_topic: "devices/ringlight/set"
+    effect: true
+    effect_list:
+      - bpm
+      - candy cane
+      - confetti
+      - cyclon rainbow
+      - dots
+      - fire
+      - glitter
+      - juggle
+      - lightning
+      - noise
+      - police all
+      - police one
+      - rainbow
+      - rainbow with glitter
+      - ripple
+      - sinelon
+      - solid
+      - twinkle
+    brightness: true
+    flash: true
+    rgb: true
+    optimistic: false
+    qos: 1
+
   - platform: mqtt
     name: "Slampher"
     command_topic: "cmnd/sonoff31/power"

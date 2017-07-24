@@ -1,0 +1,6 @@
+ring_light_speed:
+  name: Ring Light Speed
+  initial: 150
+  min: 1
+  max: 150
+  step: 5

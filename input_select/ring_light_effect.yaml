@@ -1,0 +1,22 @@
+ring_light_effect:
+  name: Ring Light Effect
+  options:
+    - '"bpm"'
+    - '"candy cane"'
+    - '"confetti"'
+    - '"cyclon rainbow"'
+    - '"dots"'
+    - '"fire"'
+    - '"glitter"'
+    - '"juggle"'
+    - '"lightning"'
+    - '"noise"'
+    - '"police all"'
+    - '"police one"'
+    - '"rainbow"'
+    - '"rainbow with glitter"'
+    - '"ripple"'
+    - '"sinelon"'
+    - '"solid"'
+    - '"twinkle"'
+  initial: '"solid"'

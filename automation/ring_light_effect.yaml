@@ -1,0 +1,11 @@
+- alias: "Ring Light Effect"
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_select.ring_light_effect
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "devices/ringlight/set"
+        payload: '{"effect":{{ trigger.to_state.state | string }},"state":"ON"}'

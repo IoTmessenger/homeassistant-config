@@ -5,8 +5,19 @@
     to: "Someone is at the door..."
   action:
     - service: light.turn_on
-      data_template:
-        message: '{"entity_id":"light.mood_light","color_name":"red","brightness":255,"flash":"long"}'
+      data:
+        entity_id:
+          - light.mood_light
+        color_name: red
+        brightness: 255
+        flash: "long"
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.ring_light
+        color_name: red
+        brightness: 255
+        flash: "long"
     - service: notify.IoTmessenger_bot
       data:
         title: doorbellNotifier
@@ -15,6 +26,9 @@
           photo:
             - url: http://www.scheveningenlive.nl/cam2.jpg?1484170348099
               caption: "doorbellNotifier"
+    - service: light.turn_on
+      data:
+        entity_id: light.gateway_light_f0b429cbea44
 #    - service: notify.RedmiNotePro
 #      data:
 #        message: 'Master, there is someone at the door. This is a Zanzito test notification'
@@ -29,11 +43,6 @@
 #      entity_id: media_player.chromecastaudio8624
 #      data:
 #        message: 'Master, there is someone at the door.'
-    - service: persistent_notification.create
-      data_template:
-        message:  >
-          Master, there was someone at the door.
-        notification_id: "doorbellnotifier"
     - service: notify.livingroom_tv
       data:
         message: "Someone is at the door..."
@@ -44,9 +53,11 @@
         message: "Someone is at the door..."
 #        data:
 #          icon: "/home/homeassistant/.homeassistant/www/doorbell.jpg"
-    - service: light.turn_on
-      data:
-        entity_id: light.gateway_light_f0b429cbea44
+    - service: persistent_notification.create
+      data_template:
+        message:  >
+          Master, there was someone at the door.
+        notification_id: "doorbellnotifier"
 #    - service: xiaomi.play_ringtone
 #      data_template:
 #        ringtone_id: 10
