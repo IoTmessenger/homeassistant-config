@@ -1,0 +1,10 @@
+- alias: Bathroom Light Button
+  trigger:
+    platform: event
+    event_type: click
+    event_data:
+      entity_id: binary_sensor.switch_158d00011035e4
+      click_type: single
+  action:
+    service: light.toggle
+    entity_id: light.bathroom

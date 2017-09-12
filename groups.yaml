@@ -62,6 +62,7 @@
     entities:
       - light.outdoors
       - light.outdoors2
+      - light.bathroom
       - light.dinner
       - switch.stranne
       - switch.strip
@@ -69,7 +70,7 @@
       - light.stairs
       - light.bedroom
       - light.computerdesk
-      - light.color2
+      - light.holmo
       - light.slampher
       - light.mood_light
       - light.ring_light
@@ -78,6 +79,7 @@
     name: All Switches
     view: no
     entities:
+      - switch.holmo_button
       - light.undefined
       - light.switch_one
       - light.switch_two
@@ -129,8 +131,10 @@
       - sensor.illumination_f0b429cbea44
       - light.stairs
       - light.dinner
+      - light.holmo
       - switch.stranne
       - switch.strip
+      - switch.holmo_button
       - group.moodlight
       - group.ringlight
       - media_player.livingroom_tv
@@ -161,6 +165,7 @@
       - sensor.ambient_light__nexus_7
       - light.outdoors
       - light.outdoors2
+      - light.bathroom
       - switch.espresso_machine
       - light.stairs
 
@@ -199,7 +204,6 @@
       - light.stairs
       - light.computerdesk
       - light.workbench
-      - light.color2
 
   security:
     name: Security

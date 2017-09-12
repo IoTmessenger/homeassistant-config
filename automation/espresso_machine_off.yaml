@@ -6,7 +6,7 @@
   action:
     - service: notify.RedmiNotePro
       data:
-        message: 'Master, the Espresso machine has been turned off. Please do not forget to clean it, again.'
+        message: 'Master, the Espresso machine has been turned off. Please do not forget to clean it. I cannot assist you with that.'
 #        title: 'Espresso prepare'
         data:
           say:

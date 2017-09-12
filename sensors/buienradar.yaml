@@ -1,6 +1,6 @@
 platform: buienradar
-#  latitude: 51.65
-#  longitude: 5.70
+latitude: 51.98
+longitude: 4.13
 monitored_conditions:
   - stationname
   - symbol

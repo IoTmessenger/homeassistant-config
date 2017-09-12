@@ -1,0 +1,10 @@
+- alias: Holmo Push button
+  trigger:
+    platform: event
+    event_type: click
+    event_data:
+      entity_id: binary_sensor.switch_158d000125cfec
+      click_type: single
+  action:
+    service: switch.toggle
+    entity_id: switch.holmo_button

@@ -59,3 +59,12 @@
   payload_off: "OFF"
   optimistic: false
 #  retain: true
+
+- platform: mqtt
+  name: "Holmo button"
+  state_topic: "devices/unobutton"
+  command_topic: "devices/unobutton/set"
+  qos: 1
+  payload_on: "1"
+  payload_off: "0"
+  optimistic: false
