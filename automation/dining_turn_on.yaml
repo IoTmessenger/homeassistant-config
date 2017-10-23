@@ -1,4 +1,4 @@
-- alias: Turn on dinner lights when there is movement
+- alias: Turn on dining lights when there is movement
   trigger:
     platform: state
     # Motion Sensor 3
@@ -10,4 +10,4 @@
       state: "below_horizon"
   action:
     service: homeassistant.turn_on
-    entity_id: script.timed_lamp_dinner
+    entity_id: script.timed_lamp_dining

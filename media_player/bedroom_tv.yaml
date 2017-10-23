@@ -1,5 +1,5 @@
 platform: webostv
 name: Bedroom TV
-host: 192.168.123.25
+host: 192.168.123.131
 mac: C8:08:E9:90:2B:7A
-filename: webostv2.conf
+filename: bedroom_tv.conf

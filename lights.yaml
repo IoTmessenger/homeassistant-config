@@ -112,7 +112,7 @@
         name: Outdoors2
         use_music_mode: False
       192.168.123.53:
-        name: Dinner
+        name: Dining
         use_music_mode: False
       192.168.123.54:
         name: Outdoors

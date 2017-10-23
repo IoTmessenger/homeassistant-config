@@ -16,8 +16,8 @@
       - device_tracker.doorbellnotifier
       - device_tracker.mailnotifier
       - updater.updater
-      - camera.zanzito_redmiNotePro_camera
-      - camera.zanzito_nexus7_camera
+#      - camera.zanzito_redmiNotePro_camera
+#      - camera.zanzito_nexus7_camera
 
   battery_levels:
     name: Battery Levels
@@ -63,7 +63,7 @@
       - light.outdoors
       - light.outdoors2
       - light.bathroom
-      - light.dinner
+      - light.dining
       - switch.stranne
       - switch.strip
       - light.gateway_light_f0b429cbea44
@@ -130,7 +130,7 @@
       - sensor.living_room_humidity
       - sensor.illumination_f0b429cbea44
       - light.stairs
-      - light.dinner
+      - light.dining
       - light.holmo
       - switch.stranne
       - switch.strip
@@ -233,7 +233,7 @@
   travel:
     name: Travel
     icon: mdi:routes
-    view: yes
+    view: no
     entities:
       - sensor.phone_to_home
       - sensor.phone_to_work_hbp

@@ -1,4 +1,4 @@
-timer_off_dinner:
+timer_off_dining:
   sequence:
     - delay:
         seconds: 60
@@ -7,4 +7,4 @@ timer_off_dinner:
 #        entity_id: light.stairs
     - service: light.turn_off
       data:
-        entity_id: light.dinner
+        entity_id: light.dining
